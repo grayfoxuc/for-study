@@ -1,3 +1,9 @@
+"""
+Enter a number and function will run the Collatz Sequence where
+it will run and print the result until = 1
+"""
+
+
 def collatz(number):
     if number % 2 == 0:
         return number // 2
@@ -5,7 +11,13 @@ def collatz(number):
         return (number * 3) + 1
 
 
-input_num = int(input("Enter number: "))
+while True:
+    try:
+        input_num = int(input("Enter number: "))
+        break
+    except:
+        print("Please enter a valid number")
+        continue
 
 while input_num != 1:
     collatz(input_num)
