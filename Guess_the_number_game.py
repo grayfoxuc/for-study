@@ -48,7 +48,7 @@ while guess != num_to_guess:
             lives -= 1
             if lives == 0:
                 print(f"\nRan out of guess credit ({lives})")
-                print("GAME OVER")
+                print(f"GAME OVER: the correct number is {num_to_guess}")
                 break
     except:
         print("Please enter a valid number")
