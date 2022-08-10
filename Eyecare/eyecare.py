@@ -21,12 +21,6 @@ def countdown(time_sec, look_away):
     clear()
 
 def start_eyecare(activity = 1200, look_away = 20):
-    try: 
-        activity = int(input("Press Enter to Start"))
-    except:
-        activity = 1200
     while True:
         countdown(activity, look_away)
     clear()
-
-start_eyecare()
