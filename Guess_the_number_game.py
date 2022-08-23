@@ -25,19 +25,19 @@ while guess != num_to_guess:
         last_guess = guess
 
         if guess == num_to_guess:
-            print(f"Lucky guess! the number is {num_to_guess}")
+            c.print(f"Lucky guess! the number is {num_to_guess}\n")
         else:
             c.print("\n[yellow]****************************************[/]")
             c.print(f"Guess the number from 0 and {max_range}", style="bold")
             c.print("[yellow]****************************************[/]")
             if guess < num_to_guess:
-                c.print(f"Clue: **HIGHER! your last guess is {str(last_guess)}")
+                c.print(f"Clue: [red]**HIGHER![/] your last guess is {str(last_guess)}")
             else:
-                c.print(f"Clue: **LOWER! your last guess is {str(last_guess)}")
+                c.print(f"Clue: [green]**LOWER![/] your last guess is {str(last_guess)}")
             lives -= 1
             if lives == 0:
                 c.print(f"\nRan out of guess credit ({lives})")
-                c.print(f"GAME OVER: the correct number is {num_to_guess}")
+                c.print(f"GAME OVER: the correct number is {num_to_guess}\n")
                 break
     except:
         print("Please enter a valid number")
