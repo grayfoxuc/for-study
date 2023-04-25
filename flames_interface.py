@@ -12,6 +12,7 @@ def output():
 
 # create a main window
 window = ttk.Window(themename="darkly")
+window.title("Know Your Destiny")
 screen_width = window.winfo_screenwidth()
 screen_height = window.winfo_screenheight()
 width = 500
@@ -32,15 +33,11 @@ name_label1 = ttk.Label(frame, text="Enter Name 1:").pack()
 entry1 = ttk.Entry(frame, textvariable=entry1_var).pack(pady=5)
 name_label2 = ttk.Label(frame, text="Enter Name 2:").pack()
 entry2 = ttk.Entry(frame, textvariable=entry2_var).pack(pady=5)
-result_button = ttk.Button(frame, text="FLAMES", command=output)
-result_button.pack(pady=5)
+result_button = ttk.Button(frame, text="FLAMES", command=output).pack(pady=10)
 result_label = ttk.Label(
     frame, text="Output", font="Calibri 24", textvariable=result_var
 ).pack(pady=5)
 
-# event
-window.bind('<Return>', lambda event: output())
-window.bind('<Alt-KeyPress-F4>', lambda event: print('test'))
 
 # window mainloop
 window.mainloop()
